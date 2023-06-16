@@ -1,0 +1,72 @@
+Duplicate Zeros
+
+Given a fixed-length integer array arr, duplicate each occurrence of zero, shifting the remaining elements to the right.
+Note that elements beyond the length of the original array are not written. Do the above modifications to the input array in place and do not return anything.
+
+Input: arr = [1,0,2,3,0,4,5,0]
+Output: [1,0,0,2,3,0,0,4]
+Explanation: After calling your function, the input array is modified to: [1,0,0,2,3,0,0,4]
+
+----------------------wrong----------------------
+/**
+ * @param {number[]} arr
+ * @return {void} Do not return anything, modify arr in-place instead.
+ */
+
+let duplicateZeros = (arr) => {
+  let newArr = []
+  arr.map((num) => {
+    if(num === 0) {
+      newArr.push(num, 0);
+    } else {
+      newArr.push(num)
+    }
+  });
+  newArr.length = arr.length;
+  // return newArr;
+}
+
+
+
+// --------
+// Input: arr = [1,0,2,3,0,4,5,0]
+// Output: [1,0,0,2,3,0,0,4]
+
+// let func23 = (arr) => {
+//   let newArr = JSON.parse( JSON.stringify(arr) );
+  
+// // 	let newArr = []
+//   arr.map((num) => {
+//     if(num === 0) {
+//       newArr.push(num, 0);
+//       console.log(num)
+//     } else {
+//       newArr.push(num)
+//     }
+//   });
+//   newArr.length = arr.length;
+//   console.log(newArr);
+//   return newArr;
+// }
+
+// func23(arr)
+
+
+
+// let arr11 = [1,0,2,3,0,4,5,0]
+let duplicateZeros5 = (arr) => {
+  let newArr = JSON.parse(JSON.stringify(arr))
+//   let newArr = []
+  newArr.map((num) => {
+    if(num === 0) {
+      newArr.push(num, 0);
+    } else {
+      newArr.push(num)
+    }
+  });
+  newArr.length = arr.length;
+  console.log(newArr)
+  return newArr;
+}
+
+duplicateZeros5(arr11)
