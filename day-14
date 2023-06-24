@@ -1,0 +1,33 @@
+Convert a string to an array
+
+Write a function to split a string and convert it into an array of words.
+
+---
+function stringToArray(string){
+	return string.split(' ')
+}
+
+------------------------------
+
+Vowel Count
+
+Return the number (count) of vowels in the given string.
+
+We will consider a, e, i, o, u as vowels for this Kata (but not y).
+
+The input string will only consist of lower case letters and/or spaces.
+---
+function getCount(str) {
+  let vowels = 'aeiouAEIOU';
+  let vowelsSum = 0;
+  
+  str.split('').map((i) => { 
+  	if(vowels.indexOf(i) !== -1) {
+      vowelsSum += 1;
+    }
+  })
+  return vowelsSum;
+}
+
+getCount("chai")
+
