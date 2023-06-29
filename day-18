@@ -1,0 +1,12 @@
+Push a hash/an object into array
+
+You are trying to put a hash in ruby or an object in javascript or java into an array, but it always returns error, solve it and keep it as simple as possible!
+
+----
+items = []
+let my_object = {}; 
+   
+my_object.a = "b";
+my_object.c = "d";
+
+items.push(my_object);
