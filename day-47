@@ -1,3 +1,5 @@
+#1.
+
 2656. Maximum Sum With Exactly K Elements
 
 You are given a 0-indexed integer array nums and an integer k. Your task is to perform the following operation exactly k times in order to maximize your score:
@@ -39,7 +41,38 @@ var maximizeSum = function(nums, k) {
     let result = resultCount.reduce((a,b) => a + b)
     return result
 };
-maximizeSum([1,2,3,4,5], 3)
+maximizeSum([1,2,3,4,5], 3) // output: 18
 
-output => 18
+----------------------
+
+#2.
+2703. Return Length of Arguments Passed
+
+Write a function argumentsLength that returns the count of arguments passed to it.
+ 
+Example 1:
+
+Input: argsArr = [5]
+Output: 1
+Explanation:
+argumentsLength(5); // 1
+
+One value was passed to the function so it should return 1.
+
+-----solution
+
+/**
+ * @return {number}
+ */
+var argumentsLength = function(...args) {
+    return args.length
+};
+
+argumentsLength(1, 2, 3); // Output: 3
+
+
+
+
+
+
 
