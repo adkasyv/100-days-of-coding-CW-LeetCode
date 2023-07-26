@@ -1,0 +1,46 @@
+2695. Array Wrapper
+
+Create a class ArrayWrapper that accepts an array of integers in its constructor. This class should have two features:
+
+When two instances of this class are added together with the + operator, the resulting value is the sum of all the elements in both arrays.
+When the String() function is called on the instance, it will return a comma separated string surrounded by brackets. For example, [1,2,3].
+ 
+
+Example 1:
+
+Input: nums = [[1,2],[3,4]], operation = "Add"
+Output: 10
+Explanation:
+const obj1 = new ArrayWrapper([1,2]);
+const obj2 = new ArrayWrapper([3,4]);
+obj1 + obj2; // 10
+
+----solution
+
+var ArrayWrapper = function(nums, operation) {
+    this.nums = nums;
+    this.operation = operation;
+};
+
+ArrayWrapper.prototype.valueOf = function() {
+    let numsArr = this.nums;
+    var numsConcat = numsArr.concat.apply([], numsArr);
+    const result = numsConcat.reduce((a,b) => a + b)
+    return result;
+}
+
+ArrayWrapper.prototype.toString = function() {
+  return this.nums.map(arr => arr.join(",")).join(",")
+;
+
+}
+
+ArrayWrapper.prototype.performOperation = function() {
+    if(this.operation === 'add') {
+      return this.valueOf()
+    } else if(this.operation === 'String') {
+      return this.toString()
+    }
+}
+
+const wrapper = new ArrayWrapper([[1,2],[3,4]], 'add'); // Output: 1
