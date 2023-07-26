@@ -44,3 +44,5 @@ ArrayWrapper.prototype.performOperation = function() {
 }
 
 const wrapper = new ArrayWrapper([[1,2],[3,4]], 'add'); // Output: 1
+
+WRONG DECISION !!!!!
