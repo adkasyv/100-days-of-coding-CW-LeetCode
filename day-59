@@ -1,0 +1,39 @@
+8 кю
+Найти кратные числа
+
+В этом простом упражнении вы создадите программу, которая принимает значение , integer и возвращает список его кратных до другого значения, limit . Если limitкратно integer, оно также должно быть включено. В функцию всегда будут передаваться только положительные целые числа, не состоящие из 0. Предел всегда будет выше основания.
+
+Например, если переданы параметры (2, 6), функция должна возвращать [2, 4, 6]значения 2, 4 и 6, кратные от 2 до 6.
+
+---solution
+
+function findMultiples(integer, limit) {
+  //your code here
+}
+
+
+function cycle(n) {
+    let result = []
+    for(let i = 0; i < n.length; i++) {
+        while (n % 2 === 0) n /= 2; 
+        result.push(n);
+
+    }
+    
+    return result;
+}
+
+function cycle(integer, limit) {
+    let result = []
+    for(let i = 0; i < limit.length; i++) {
+        result.push(limit);
+
+    }
+    
+    return result;
+}
+
+cycle(2, 6)
+
+
+DOESN'T WORK !
