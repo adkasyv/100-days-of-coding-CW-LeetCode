@@ -80,4 +80,37 @@ function getSum(a, b) {
   return sum
 }
 
-getSum(-1,2)qqq
+getSum(-1,2)
+
+
+
+
+-----4
+дока задачка
+
+
+
+Напишите функцию, которая принимает любое количество аргументов типа String или Number и возвращает их сумму, если все аргументы являются числами, или конкатенирует их по правилам JS, если хотя бы один аргумент является строкой.
+
+1,2,5 => 8
+1,2,'5' => '35'
+'1', 2, 5 => '125'
+
+решение:
+function sumCount(...args) {
+  const arr = [];
+  const resultArray = args.map(element => {
+    if (typeof element === 'number' || typeof element === 'string') {
+      return arr.push(element);
+    } else {
+      return 'Неизвестный тип';
+    }
+  });
+  
+  let result = arr.reduce((a,b) => a+b)
+  return result;
+}
+
+
+
+sumCount(1,2,'5')
