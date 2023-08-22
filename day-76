@@ -1,0 +1,26 @@
+8 kyu
+Double Char
+
+Given a string, you have to return a string in which each character (case-sensitive) is repeated once.
+Examples (Input -> Output):
+
+* "String"      -> "SSttrriinngg"
+* "Hello World" -> "HHeelllloo  WWoorrlldd"
+* "1234!_ "     -> "11223344!!__  "
+
+
+solution
+function doubleChar(str) {
+  const arr = [];
+	if(typeof(str)) {
+    let result = str.split('');
+    result.map((i) => {
+      arr.push(i);
+      arr.push(i);
+    })
+    return arr.join('')
+  }
+}
+	
+
+doubleChar('hel')
