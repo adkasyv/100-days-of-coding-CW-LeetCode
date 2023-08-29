@@ -26,17 +26,24 @@ The middle character(s) of the word represented as a string.
 function getMiddle(s)
 {
   let mid = Math.floor(s.split('').length / 2)
-  if(mid.length == 1) {return s}
- 	if(mid % 2 == 0){
-    const index2 = mid - 1;
-    return [s[index2] + s[mid]];
+  if(mid.length == 1) {
+    return s
+  }
+  console.log(mid)
+ 	
+  if(mid % 2 == 0){
+    return s[mid]
   } else {
-	  return s[mid]  
+    const index2 = mid - 1;
+    return [s[index2] + s[mid]];  
   }
   
 }
 
-getMiddle("a")
+getMiddle("testing")
+
+
+
 
 
 
