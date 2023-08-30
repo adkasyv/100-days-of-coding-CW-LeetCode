@@ -29,20 +29,15 @@ function getMiddle(s)
   if(mid.length == 1) {
     return s
   }
-  console.log(mid)
- 	
-  if(mid % 2 == 0){
-    return s[mid]
-  } else {
+  if(s.length % 2 == 0){
     const index2 = mid - 1;
-    return [s[index2] + s[mid]];  
-  }
-  
+    return s[index2] + s[mid];  
+  } else {
+    return s[mid]
+  }  
 }
 
-getMiddle("testing")
-
-
+getMiddle("middle")
 
 
 
