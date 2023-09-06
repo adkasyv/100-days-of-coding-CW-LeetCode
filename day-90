@@ -42,8 +42,7 @@ function longest(s1, s2) {
   for(let i = 0; i < sumString.length; i++) {
     result.add(sumString[i])
   }
-  return Array.from(result).sort((a,b) => a + b).join('')
+  return Array.from(result).sort((a,b) => a.localeCompare(b)).join('')
 }
 
 longest("aretheyhere", "yestheyarehere");
-
