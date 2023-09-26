@@ -18,3 +18,39 @@ var min = function(list){
 var max = function(list){
     return Math.max(...list);
 }
+
+
+
+2---------
+7 кю
+Нечетный или четный?
+Задача:
+Учитывая список целых чисел, определите, является ли сумма его элементов нечетной или четной.
+
+Дайте ответ в виде совпадения строки "odd"или "even".
+
+Если входной массив пуст, рассматривайте его как: [0](массив с нулем).
+
+Примеры:
+Input: [0]
+Output: "even"
+
+Input: [0, 1, 4]
+Output: "odd"
+
+Input: [0, -1, -5]
+Output: "even"
+
+
+solution
+function oddOrEven(array) {
+   if (array.length === 0) {
+    return "even"; 
+  }
+  let result = array.reduce((acc, cur) => acc + cur);
+  
+  return result % 2 === 0 ? 'even' : 'odd'
+}
+
+
+3----------
