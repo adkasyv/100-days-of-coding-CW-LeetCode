@@ -45,3 +45,29 @@ function powersOfTwo(n){
 }
 
 powersOfTwo(4)
+
+
+
+3----
+6 кю
+Break CamelКейс    
+
+Завершите решение так, чтобы функция разбивала верблюжий регистр, используя пробел между словами.
+
+Пример
+"camelCasing"  =>  "camel Casing"
+"identifier"   =>  "identifier"
+""             =>  ""
+
+
+solution
+function solution(string) {
+    let a = string.split('');
+    return a.map((i) => {
+        if(i !== i.toUpperCase()) {
+            return i
+        } else {
+            return ' ' + i
+        }
+    }).join('')   
+}
