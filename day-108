@@ -1,0 +1,25 @@
+Given a list of directions to spin, "left" or "right", return an integer of how many full 360° rotations were made. Note that each word in the array counts as a 90° rotation in that direction.
+
+Worked Example
+["right", "right", "right", "right", "left", "right"] ➞ 1
+# You spun right 4 times (90 * 4 = 360)
+# You spun left once (360 - 90 = 270)
+# But you spun right once more to make a full rotation (270 + 90 = 360)
+
+function spinAround(directions) {
+  let totalRotation = 0;
+
+  for (let direction of directions) {
+    if (direction === "right") {
+      totalRotation += 90;
+    } else if (direction === "left") {
+      totalRotation -= 90;
+    }
+  }
+
+  const fullRotations = Math.floor(Math.abs(totalRotation) / 360);
+  return fullRotations;
+}
+
+немое решение, ноя старался
+  
