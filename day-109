@@ -1,12 +1,27 @@
-8 кю
-Простые числа Уилсона
+8 кю -- Флик-переключатель
+Задача
+Создайте функцию, которая всегда возвращает результат trueдля каждого элемента в заданном списке. Однако, если элементом является слово «flick» , переключитесь на всегда возврат противоположного логического значения.
 
-Простые числа Вильсона удовлетворяют следующему условию. ПустьPпредставляет собой простое число.
+Примеры
+['codewars', 'flick', 'code', 'wars'] ➞ [True, False, False, False]
 
-Затем,
+['flick', 'chocolate', 'adventure', 'sunshine'] ➞ [False, False, False, False]
 
-((P-1)! + 1) / (P * P)
-должен дать целое число.
+['bicycle', 'jarmony', 'flick', 'sheep', 'flick'] ➞ [True, True, False, False, True]
 
-Ваша задача — создать функцию, которая возвращает значение, trueесли данное число является простым числом Вильсона .
 
+
+
+function processWords(inputArray) {
+  let showTrue = true;
+  
+  return inputArray.map(word => {
+    if (word === "flick") {
+      showTrue = !showTrue;
+    }
+    return showTrue;
+  });
+}
+
+
+processWords(['codewars', 'flick', 'code', 'wars'])
