@@ -1,0 +1,10 @@
+
+
+
+function onlyOne(...flags) {
+  if (flags.length === 0) {
+    return false;
+  }
+
+  return flags.includes(true) && flags.length === flags.filter(flag => flag).length;
+}
